@@ -5,7 +5,7 @@
             <div class='card-body'>
                 <h5 class='card-title'>{{i +1}}: {{item.name}}</h5>
                 <p class='card-text'>{{item.description}}</p>
-                <a href='#' class='btn btn-primary'>Go</a>
+                <a [routerLink]='[item.id]' class='btn btn-primary'>View Details</a>
             </div>
         </div>
     </div>

@@ -14,7 +14,8 @@
             
                       <label for="imageUrl">Image URL</label>
                       <input formControlName="imageUrl" type="text" class="form-control" id="imageUrl">            
-                    </div>            
+                    </div>
+                    <button *ngIf='editingItemId !== undefined' type='button' class='btn btn-primary mx-2' (click)='onCancelEditItem()'>Cancel Edit</button>         
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
     </div>
@@ -27,6 +28,7 @@
             </div>
             <div class='col-md-6'>
                 <button class='btn btn-danger float-right' (click)='onDelete(item)'>Delete</button>
+                <button class='btn btn-info float-right mx-2' (click)='onStartEditItem(item)'>Edit</button>
             </div>
         </div>
     </div>

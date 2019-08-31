@@ -1,1 +1,18 @@
-<p>item-detail works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card" *ngIf='item' style="width: 12rem;">
+                <img class="card-img-top" *ngIf="item?.imageUrl" [src]="item?.imageUrl" alt="Card image" height="100">
+
+                <div class="card-body">
+                    <h5 class="card-title"> {{ item?.name }}</h5>
+                    <p class="card-text">
+                        {{ item?.description }}
+                    </p>
+                    <a [routerLink]="[item.id]" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+            <p *ngIf='!item'>Item not found</p>
+        </div>
+    </div>
+</div>
