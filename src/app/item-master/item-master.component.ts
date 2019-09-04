@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 export class ItemMasterComponent implements OnInit, OnDestroy {
 	items: Item[] = [];
 	itemsSub: Subscription;
+	filterText: string = '';
 	constructor(private itemsService: ItemsService) {}
 
 	ngOnInit() {

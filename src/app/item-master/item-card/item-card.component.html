@@ -1,11 +1,12 @@
 <div class='row'>
     <div class='col-md-12'>
-        <div class='card'>
+        <div class='card style="width: 12rem;'>
             <img class='card-img-top' [src]="item.imageUrl" alt="Card image cap" height='100'>
             <div class='card-body'>
                 <h5 class='card-title'>{{i +1}}: {{item.name}}</h5>
                 <p class='card-text'>{{item.description}}</p>
                 <a [routerLink]='[item.id]' class='btn btn-primary'>View Details</a>
+                <app-button [item]='item'></app-button>
             </div>
         </div>
     </div>

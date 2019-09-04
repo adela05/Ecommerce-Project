@@ -27,8 +27,9 @@ export class Item {
 })
 export class ItemsService {
 	items: Item[] = [ new Item('Toy Story', 'kids', 9.99, '') ];
-	//add the api url here
-	apiUrl = 'http://192.168.200.45:3000';
+	//add the api url here, one is for class and the other at home
+	//apiUrl = 'http://192.168.200.45:3000';
+	apiUrl = 'https://crudpi.io/39f94f';
 	constructor(private http: HttpClient) {}
 
 	addItem(name: string, description: string, price?: number, imageUrl?: string) {
@@ -74,6 +75,7 @@ export class ItemsService {
 		const url = `${this.apiUrl}/items/${itemId}`;
 		return this.http.delete<Item>(url);
 	}
+	// This is api PUT request
 	updateItemOnServer(
 		itemId: number,
 		name: string,

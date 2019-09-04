@@ -10,6 +10,7 @@
                         {{ item?.description }}
                     </p>
                     <a [routerLink]="[item.id]" class="btn btn-primary">View Details</a>
+                    <app-button [item]='item'></app-button>
                 </div>
             </div>
             <p *ngIf='!item'>Item not found</p>
